@@ -7,6 +7,8 @@
   --bg-black-color: #2f303a;
   --bg-white-color: #fff;
   --border-grey-color: #ececec;
+  --time: 250ms;
+  --type-transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -87,17 +89,22 @@ img {
 }
 
 .header {
-  padding: 25px 0;
   border-bottom: 1px solid var(--border-grey-color);
 }
 
-.header__nav,
-.header__nav-lists,
-.header__address,
-.team__lists {
+.header__address{
   display: flex;
-  justify-content: space-around;
+  gap: 30px;
+}
+.header__nav{
+  display: flex;
   align-items: center;
+}
+
+.header__nav-lists{
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .icon-smartphone {
@@ -134,15 +141,7 @@ img {
 .details__lists {
   display: flex;
   justify-content: space-between;
-}
-
-.details__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.header__nav-item:not(:last-child),
-.header__address-item:not(:last-child) {
-  margin-right: 50px;
+  gap: 30px;
 }
 
 .header__nav-link {
@@ -154,11 +153,13 @@ img {
   font-family: inherit;
   color: inherit;
   padding: 30px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  transition: color var(--time) var(--type-transition);
+  -webkit-transition: color var(--time) var(--type-transition);
+  -moz-transition: color var(--time) var(--type-transition);
+  -ms-transition: color var(--time) var(--type-transition);
+  -o-transition: color var(--time) var(--type-transition);
+  position: relative;
 }
 
 .header__nav-link-address {
@@ -168,11 +169,13 @@ img {
   line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--grey-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time) var(--type-transition);
+  -webkit-transition: color var(--time) var(--type-transition);
+  -moz-transition: color var(--time) var(--type-transition);
+  -ms-transition: color var(--time) var(--type-transition);
+  -o-transition: color var(--time) var(--type-transition);
+  display: flex;
+  align-items: center;
 }
 
 .header__nav-link:hover,
@@ -197,11 +200,16 @@ img {
   height: 4px;
   border: 1px solid #2196f3;
   border-radius: 2px;
+  border-radius: 2px;
   background-color: #2196f3;
-  position: relative;
-  top: 30px;
+  position: absolute;
+  bottom:-1px;
   left: 0;
   cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 
 .banner__link:hover,
@@ -229,9 +237,6 @@ img {
   color: var(--white-color);
   margin-bottom: 30px;
   letter-spacing: 0.06em;
-  max-width: 696px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .banner__link {
@@ -246,11 +251,16 @@ img {
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--time) var(--type-transition);
+  -webkit-transition: background-color var(--time) var(--type-transition);
+  -moz-transition: background-color var(--time) var(--type-transition);
+  -ms-transition: background-color var(--time) var(--type-transition);
+  -o-transition: background-color var(--time) var(--type-transition);
+  transition: color var(--time) var(--type-transition);
+  -webkit-transition: color var(--time) var(--type-transition);
+  -moz-transition: color var(--time) var(--type-transition);
+  -ms-transition: color var(--time) var(--type-transition);
+  -o-transition: color var(--time) var(--type-transition);
 }
 
 /* banner style / start */
@@ -309,7 +319,10 @@ img {
 .doing {
   padding-bottom: 94px;
 }
-
+.doing__lists{
+  display: flex;
+  gap: 30px ;
+}
 .doing__title {
   font-family: inherit;
   font-weight: 700;
@@ -375,10 +388,9 @@ img {
   background-color: var(--bg-grey-color);
 }
 
-.doing__lists,
 .team__lists {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .team__item {
@@ -386,7 +398,6 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  padding-bottom: 30px;
 }
 
 .team__title {
@@ -425,6 +436,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--grey-color);
+  margin-bottom: 16px;
 }
 
 .team__social-links {
@@ -443,11 +455,11 @@ img {
   width: 44px;
   height: 44px;
   fill: #afb1b8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time) var(--type-transition);
+  -webkit-transition: color var(--time) var(--type-transition);
+  -moz-transition: color var(--time) var(--type-transition);
+  -ms-transition: color var(--time) var(--type-transition);
+  -o-transition: color var(--time) var(--type-transition);
 }
 
 .team__social-links .button-icon {
@@ -472,7 +484,7 @@ img {
 /* clients style / start */
 .clients__lists {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .clients__title {
@@ -493,11 +505,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time) var(--type-transition);
+  -webkit-transition: color var(--time) var(--type-transition);
+  -moz-transition: color var(--time) var(--type-transition);
+  -ms-transition: color var(--time) var(--type-transition);
+  -o-transition: color var(--time) var(--type-transition);
 }
 
 .clients__icon {
@@ -519,14 +531,6 @@ img {
 /* clients style / end */
 
 /* styles portfolio / start */
-.portfolio__buttons-item {
-  margin-right: 8px;
-}
-
-.portfolio__buttons-item:last-child {
-  margin-right: 0;
-}
-
 .portfolio__button-link {
   font-family: inherit;
   font-weight: 500;
@@ -539,12 +543,18 @@ img {
   border: 0;
   cursor: pointer;
   color: inherit;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--time) var(--type-transition);
+  -webkit-transition: background-color var(--time) var(--type-transition);
+  -moz-transition: background-color var(--time) var(--type-transition);
+  -ms-transition: background-color var(--time) var(--type-transition);
+  -o-transition: background-color var(--time) var(--type-transition);
+  transition: color var(--time) var(--type-transition);
+  -webkit-transition: color var(--time) var(--type-transition);
+  -moz-transition: color var(--time) var(--type-transition);
+  -ms-transition: color var(--time) var(--type-transition);
+  -o-transition: color var(--time) var(--type-transition);
 }
+
 
 .portfolio__title {
   font-family: inherit;
@@ -577,6 +587,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap:8px;
   margin-bottom: 50px;
 }
 
@@ -592,9 +603,9 @@ img {
 
 .portfolio__gallery-link:hover,
 .portfolio__gallery-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 
 .portfolio__button-link {
   padding: 6px 25px;
@@ -625,21 +636,35 @@ img {
   padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--time) var(--type-transition);
+  -webkit-transition: t;
+  -moz-transition: t;
+  -ms-transition: t;
+  -o-transition: t;
+  transition: color var(--time) var(--type-transition);
+  -webkit-transition: color var(--time) var(--type-transition);
+  -moz-transition: color var(--time) var(--type-transition);
+  -ms-transition: color var(--time) var(--type-transition);
+  -o-transition: color var(--time) var(--type-transition);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transition: transform var(--time) var(--type-transition);
 }
 
-.portfolio__thumb:hover .portfolio__overlay,
-.portfolio__thumb:focus .portfolio__overlay {
+.portfolio__gallery-link:hover .portfolio__overlay,
+.portfolio__item:focus .portfolio__overlay {
   transform: translateY(0);
-  overflow: visible;
+  transition: transform var(--time) var(--type-transition);
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
+  -webkit-transition: transform var(--time) var(--type-transition);
+  -moz-transition: transform var(--time) var(--type-transition);
+  -ms-transition: transform var(--time) var(--type-transition);
+  -o-transition: transform var(--time) var(--type-transition);
 }
 
 .portfolio__overlay-text {
