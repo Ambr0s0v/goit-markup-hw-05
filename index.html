@@ -49,7 +49,7 @@
       <!-- banner / start -->
       <section class="banner">
           <h1 class="banner__title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="banner__link">Замовити послугу</button>
+          <button type="button" class="banner__link" data-modal-open>Замовити послугу</button>
       </section>
       <!-- banner / end -->
       <!-- details -->
@@ -391,12 +391,10 @@
       
     </footer>
 
-      <button>Открыть модальное окно</button>
-      <div class="backgrop is-hidden">
+      
+      <div class="backgrop is-hidden" data-modal>
         <div class="modal">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus itaque omnis optio dignissimos unde error nulla laboriosam veritatis porro soluta, id, incidunt enim officia dicta ad quod facilis, aliquid harum!
-          </p>
-          <button>Закрыть </button>
+          <button class="modal__close" data-modal-close></button>
         </div>
 
       </div>
