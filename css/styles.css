@@ -454,12 +454,14 @@ img {
   background: none;
   width: 44px;
   height: 44px;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   fill: #afb1b8;
   transition: color var(--time) var(--type-transition);
-  -webkit-transition: color var(--time) var(--type-transition);
-  -moz-transition: color var(--time) var(--type-transition);
-  -ms-transition: color var(--time) var(--type-transition);
-  -o-transition: color var(--time) var(--type-transition);
+  transition: background-color var(--time) var(--type-transition);
+
 }
 
 .team__social-links .button-icon {
@@ -506,10 +508,7 @@ img {
   justify-content: center;
   align-items: center;
   transition: color var(--time) var(--type-transition);
-  -webkit-transition: color var(--time) var(--type-transition);
-  -moz-transition: color var(--time) var(--type-transition);
-  -ms-transition: color var(--time) var(--type-transition);
-  -o-transition: color var(--time) var(--type-transition);
+  transition: background-color var(--time) var(--type-transition);
 }
 
 .clients__icon {
@@ -543,16 +542,8 @@ img {
   border: 0;
   cursor: pointer;
   color: inherit;
-  transition: background-color var(--time) var(--type-transition);
-  -webkit-transition: background-color var(--time) var(--type-transition);
-  -moz-transition: background-color var(--time) var(--type-transition);
-  -ms-transition: background-color var(--time) var(--type-transition);
-  -o-transition: background-color var(--time) var(--type-transition);
   transition: color var(--time) var(--type-transition);
-  -webkit-transition: color var(--time) var(--type-transition);
-  -moz-transition: color var(--time) var(--type-transition);
-  -ms-transition: color var(--time) var(--type-transition);
-  -o-transition: color var(--time) var(--type-transition);
+  transition: background-color var(--time) var(--type-transition);
 }
 
 
@@ -700,6 +691,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--white-color);
+  transition: color var(--time) var(--type-transition);
 }
 
 .footer__link {
@@ -767,6 +759,12 @@ img {
   height: 44px;
   background-color: #44454e;
   border-radius: 50%;
+  transition: color var(--time) var(--type-transition);
+  transition: background-color var(--time) var(--type-transition);
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
