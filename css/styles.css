@@ -135,7 +135,7 @@ img {
 
 .header__nav-link-address:hover,
 .header__nav-link-address:focus {
-  fill: var(--blue-color);
+  color: var(--blue-color);
 }
 
 .details__lists {
@@ -155,14 +155,15 @@ img {
   padding: 30px 0;
   display: block;
   transition: color var(--time) var(--type-transition);
+  position: relative;
   -webkit-transition: color var(--time) var(--type-transition);
   -moz-transition: color var(--time) var(--type-transition);
   -ms-transition: color var(--time) var(--type-transition);
   -o-transition: color var(--time) var(--type-transition);
-  position: relative;
 }
 
 .header__nav-link-address {
+  width: 100%;
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -170,18 +171,17 @@ img {
   letter-spacing: 0.02em;
   color: var(--grey-color);
   transition: color var(--time) var(--type-transition);
+  display: flex;
+  align-items: center;
   -webkit-transition: color var(--time) var(--type-transition);
   -moz-transition: color var(--time) var(--type-transition);
   -ms-transition: color var(--time) var(--type-transition);
   -o-transition: color var(--time) var(--type-transition);
-  display: flex;
-  align-items: center;
 }
+
 
 .header__nav-link:hover,
 .header__nav-link:focus,
-.header__nav-link-address:hover,
-.header__nav-link-address:focus,
 .footer__place:hover,
 .footer__place:focus,
 .footer__link:hover,
@@ -211,7 +211,10 @@ img {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 }
-
+.icon-envelope,
+.icon-smartphone{
+  fill: currentColor;
+}
 .banner__link:hover,
 .banner__link:focus {
   background-color: #188ce8;
@@ -442,10 +445,7 @@ img {
 .team__social-links {
   display: flex;
   justify-content: center;
-}
-
-.team__social-links li:not(:last-child) {
-  margin-right: 10px;
+  gap: 10px;
 }
 
 .team__social-links .button {
@@ -461,6 +461,11 @@ img {
   fill: #afb1b8;
   transition: color var(--time) var(--type-transition);
   transition: background-color var(--time) var(--type-transition);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 
 }
 
@@ -471,11 +476,7 @@ img {
 
 .team__social-links .button:hover,
 .team__social-links .button:focus {
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+
   background-color: var(--blue-color);
   fill: #fff;
   cursor: pointer;
@@ -507,14 +508,22 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color var(--time) var(--type-transition);
-  transition: background-color var(--time) var(--type-transition);
+  transition:  border-color var(--time) var(--type-transition);
+  -webkit-transition:  border-color var(--time) var(--type-transition);
+  -moz-transition:  border-color var(--time) var(--type-transition);
+  -ms-transition:  border-color var(--time) var(--type-transition);
+  -o-transition:  border-color var(--time) var(--type-transition);
 }
+
+
 
 .clients__icon {
   fill: #afb1b8;
-  width: 93px;
-  height: 43px;
+  transition: fill var(--time) var(--type-transition);
+  -webkit-transition: fill var(--time) var(--type-transition);
+  -moz-transition: fill var(--time) var(--type-transition);
+  -ms-transition: fill var(--time) var(--type-transition);
+  -o-transition: fill var(--time) var(--type-transition);
 }
 
 .clients__link:hover,
@@ -554,8 +563,6 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--black-color);
-  padding-top: 20px;
-  padding-left: 24px;
 }
 
 .portfolio__text {
@@ -565,13 +572,12 @@ img {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--grey-color);
-  padding-bottom: 20px;
-  margin-left: 24px;
 }
 
 .portfolio__info {
   border: 1px solid #eeeeee;
   border-top: 0;
+  padding: 20px 24px;
 }
 
 .portfolio__buttons {
@@ -645,7 +651,7 @@ img {
 }
 
 .portfolio__gallery-link:hover .portfolio__overlay,
-.portfolio__item:focus .portfolio__overlay {
+.portfolio__gallery-link:focus .portfolio__overlay {
   transform: translateY(0);
   transition: transform var(--time) var(--type-transition);
   -webkit-transform: translateY(0);
